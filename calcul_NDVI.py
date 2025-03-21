@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import argparse
 from dask.array.image import imread
 import dask.array as da
-import numpy as np
-from skimage.io import imsave
 
 def readArgs():
     parser = argparse.ArgumentParser()
