@@ -2,7 +2,7 @@
 
 import matplotlib.pyplot as plt
 import argparse
-from dask.array.image import imread
+from dask.array.image import imread as da_imread
 import dask.array as da
 
 def readArgs():
@@ -18,7 +18,7 @@ def realizeNDVI(inputImage):
     return (inputImage[:, :, :, 2] - inputImage[:, :, :, 3]) / (inputImage[:, :, :, 3] + inputImage[:, :, :, 2])
 
 def readFileFromPath(path):
-    images_array = imread(path)
+    images_array = da_imread(path)
     return images_array
 
 def prepareNDVI(images_array):
