@@ -13,4 +13,4 @@ jobs:
       with:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        REPO2DOCKER_EXTRA_ARGS: "--appendix 'RUN chmod 755 ${HOME}'"
+        APPENDIX_FILE: DockerFile_appendix.dockerfile
