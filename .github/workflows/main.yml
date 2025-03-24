@@ -7,6 +7,11 @@ jobs:
 
     - name: checkout files in repo
       uses: actions/checkout@main
+    - name: get dockerfile
+      env:
+        TOKEN: ${{ secrets.repo_token }}
+      run: |
+        curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/Roussman/pytudes/main/DockerFile_appendix.dockerfile
 
     - name: update jupyter dependencies with repo2docker
       uses: jupyterhub/repo2docker-action@master
