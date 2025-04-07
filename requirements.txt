@@ -1,4 +1,3 @@
 matplotlib
 dask
 scikit-image
-boto3
